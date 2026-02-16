@@ -20,7 +20,7 @@ flatpickr(input, {
   minuteIncrement: 1,
   onClose(selectedDates) {
     const selectedDate = selectedDates[0];
-    if (selectedDates <= new Date()) {
+    if (selectedDate <= new Date()) {
       iziToast.error({ message: 'Please choose a date in the future' });
       button.disabled = true;
       return;
